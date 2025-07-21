@@ -10,6 +10,7 @@ import {
   Mail, 
   Link,
   BookOpen,
+  Crown,
   LogOut
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -98,6 +99,14 @@ const ProfileSidebar = ({ onClose }: ProfileSidebarProps) => {
       icon: BookOpen,
       onClick: () => {
         console.log("Navigate to tutorials");
+        onClose();
+      }
+    },
+    {
+      title: "Foodie Pro",
+      icon: Crown,
+      onClick: () => {
+        console.log("Navigate to foodie pro");
         onClose();
       }
     }
