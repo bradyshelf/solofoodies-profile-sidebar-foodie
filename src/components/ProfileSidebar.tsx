@@ -2,10 +2,14 @@
 import { useState } from 'react';
 import { 
   User, 
+  CreditCard,
+  MapPin,
   Heart, 
+  Star,
   History, 
   Mail, 
-  Bell, 
+  Link,
+  BookOpen,
   LogOut
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -34,10 +38,34 @@ const ProfileSidebar = ({ onClose }: ProfileSidebarProps) => {
       onClick: handleProfileClick
     },
     {
+      title: "Mis tarifas",
+      icon: CreditCard,
+      onClick: () => {
+        console.log("Navigate to tarifas");
+        onClose();
+      }
+    },
+    {
+      title: "Mis viajes",
+      icon: MapPin,
+      onClick: () => {
+        console.log("Navigate to viajes");
+        onClose();
+      }
+    },
+    {
       title: "Colaboraciones",
       icon: Heart,
       onClick: () => {
         console.log("Navigate to collaborations");
+        onClose();
+      }
+    },
+    {
+      title: "Reseñas",
+      icon: Star,
+      onClick: () => {
+        console.log("Navigate to reviews");
         onClose();
       }
     },
@@ -58,10 +86,18 @@ const ProfileSidebar = ({ onClose }: ProfileSidebarProps) => {
       }
     },
     {
-      title: "Suscripción",
-      icon: Bell,
+      title: "Sololink",
+      icon: Link,
       onClick: () => {
-        console.log("Navigate to subscription");
+        console.log("Navigate to sololink");
+        onClose();
+      }
+    },
+    {
+      title: "Tutoriales",
+      icon: BookOpen,
+      onClick: () => {
+        console.log("Navigate to tutorials");
         onClose();
       }
     }
